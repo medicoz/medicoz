@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="manifest" href="manifest.json">
+        <title>our company Structure</title>
+    </head>  
+    <body>  
+    
+        <div id="fb-root"></div>  
+<div id="status">
+ Click on Below Image to start the demo: <br/> 
+<h1 onclick="Login()"> login</h1>
+</div>
+
+
+        <div id="header">
+            <span>Make layout</span>
+            <ul id="menu">
+                <li>ABOUT</li>
+                <li>Articles</li>
+                <li>Concept</li>
+                <li>About us</li>
+            </ul> 
+            <!--<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+        </div> -->
+        <div id="content">
+          
+            <p>It seems to be pretty easy to create a good-looking web page. Even your neighbor has one or two of them. It's for sure! For approximately two decades of World Wide Web existence hordes of web developers are trying to improve the way of how you interact with the Global Network. And how it interacts with you through different technologies such as JavaScript, for example... </p>
+            
+        </div> 
+  
+  <div class="row" id="pwd-container">
+    <div class="col-md-4">.col-md-4</div>
+  <div class="col-md-4">.col-md-4</div>
+  
+    <div class="col-md-4"> 
+        <form method="post" action="#" role="login">
+       
+          <input type="email" name="email" placeholder="Email" required class="form-control input-lg" /> 
+          <br>
+          
+          <input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
+          
+          <br>          
+          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+          <div> 
+              <br>
+            <a href="#">Create account</a> or <a href="#">reset password</a>
+          </div>
+          
+        </form>
+      </div> 
+
+ <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-database.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-messaging.js"></script>    
+
+<script> 
+  let config = {
+    apiKey: "AIzaSyAIOyBB_V-j2uFEJ0WFGHF1__-QoEimSPg",
+    authDomain: "testfcm-8373e.firebaseapp.com",
+    databaseURL: "https://testfcm-8373e.firebaseio.com",
+    storageBucket: "testfcm-8373e.appspot.com",
+    messagingSenderId: "313756505913"
+  } 
+
+  firebase.initializeApp(config) 
+
+ const messaging = firebase.messaging(); 
+
+ messaging.requestPermission()
+.then(function() { 
+  console.log('Notification permission granted.') 
+  
+   console.log('coming up to here')
+  return messaging.getToken()
+}).
+then(function(Token) {
+console.log(Token)
+}) 
+.catch(function(err) {
+  console.log('Unable to get permission to notify.', err);
+})
+ 
+</script>  
+    </body>
+</html>

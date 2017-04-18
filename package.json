@@ -1,24 +1,23 @@
-
 {
-    "name"          : "project",
-    "description"   : "project Server",
-    "main"          : "server.js",
-    "version"       : "1.0.0",
-    "private"       : true,
-    "author"        : "Satyam Singh",
-    "engines": {
-        "node"      : "4.1.0",
-        "npm"       : "2.14.3"
-    },
-    "scripts": {
-	"test": "mocha test/unittest"
-    },
-    "dependencies": {
-        "mongodb"          : "latest",
-        "redis"            : "latest",
-        "mkdirp"           : "latest" ,
-        "mime"             : "latest"
-    },
-    "devDependencies": {
-    }
+  "name": "project",
+  "description": "project Server",
+  "main": "server.js",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Satyam Singh",
+  "engines": {
+    "node": "4.1.0",
+    "npm": "2.14.3"
+  },
+  "scripts": {
+    "test": "mocha test/unittest"
+  },
+  "dependencies": {
+    "jwt-simple": "^0.5.1",
+    "mime": "latest",
+    "mkdirp": "latest",
+    "mongodb": "latest",
+    "redis": "latest"
+  },
+  "devDependencies": {}
 }
